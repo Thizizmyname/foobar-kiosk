@@ -1,0 +1,11 @@
+@import "styles/common/globals";
+@import "styles/primary/App.scss";
+
+html, body, .fillScreen {
+    width: 100%;
+    height: 100%;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+}

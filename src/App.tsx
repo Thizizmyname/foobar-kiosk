@@ -5,6 +5,7 @@ import * as style from "styles/common/App.scss";
 import configureStore from "store/configureStore";
 import PrimaryScreen from "components/PrimaryScreen";
 import SecondaryScreen from "components/SecondaryScreen";
+import AndroidScreen from "components/AndroidScreen";
 import { Provider, connect } from "react-redux";
 import { Flex } from "reflexbox";
 import { DevToolbar } from "components";
@@ -39,6 +40,8 @@ class App extends React.Component<IAppProps, {}> {
             return (<PrimaryScreen {...this.props} />);
         } else if (process.env.SCREEN === 'secondary') {
             return (<SecondaryScreen {...this.props} />);
+        } else if (process.env.SCREEN === 'android') {
+            return (<AndroidScreen {...this.props} />);
         }
     }
 }
